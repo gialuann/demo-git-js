@@ -1,0 +1,12 @@
+#clock{
+    color: green;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: 3rem;
+}
+#clock1{
+    color: red;
+    font-weight: bold;
+    font-size: 2rem;
+}
