@@ -1,7 +1,11 @@
-import './index.css'
+// import './index.css'
 import Button from '@mui/material/Button';
 import React, { useState } from "react";
 import TextField from '@mui/material/TextField';
+
+import style from './style.module.css'
+
+
 const { useEffect } = React;
 const NumGenerator = () => {
     const [min, setMin] = useState(1);
@@ -41,18 +45,18 @@ const NumGenerator = () => {
         setNumber(generateNumber(min, max));
     }, []);
     return (
-        <div >
-            <div className='wrapper-first-row'>
-                <div className='wrapper-result'>
+        <div>
+            <div className={style['wrapper-first-row']}>
+                <div className={style['wrapper-result']}>
                     <p>{number}</p>
                 </div>
-                <div className='wrapper-nim-max'>
+                <div className={style['wrapper-nim-max']}>
                     <TextField id="standard-basic" label="min" variant="standard" value={min} onChange={minChange} />
                     <TextField id="standard-basic" label="max" variant="standard" value={max} onChange={maxChange} />
                 </div>  
             </div>
             <div>
-                <Button variant="contained" className='random-button' type="submit" onClick={getInputs}>Generate Number</Button>
+                <Button variant="contained" className={style['random-button']} type="submit" onClick={getInputs}>Generate Number</Button>
             </div>
         </div>
     );
